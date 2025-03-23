@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cab Rental & Bus Hiring</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="bookingHeader">
+        <h1 id="bookingTitle">Cab Rental & Bus Hiring</h1>
+    </div>
+
+    <div id="languageSelector">
+        <label for="language">Select Language: </label>
+        <select id="language" onchange="changeLanguage()">
+            <option value="en">English</option>
+            <option value="fr">French</option>
+            <option value="hi">Hindi</option>
+            <option value="ta">Tamil</option>
+            <option value="ml">Malayalam</option>
+            <option value="te">Telugu</option>
+            <option value="de">German</option>
+            <option value="ja">Japanese</option>
+            <option value="zh">Chinese</option>
+        </select>
+    </div>
+
+    <div id="vehicleSelection">
+        <label for="vehicleType" id="vehicleTypeLabel">Select Vehicle Type:</label>
+        <select id="vehicleType">
+            <option value="bus">Bus</option>
+            <option value="cab">Cab</option>
+        </select>
+        <br>
+
+        <label for="busSize" id="busSizeLabel">Select Bus Size:</label>
+        <select id="busSize">
+            <option value="small">Small (10-20 seats)</option>
+            <option value="medium">Medium (20-40 seats)</option>
+            <option value="large">Large (40-60 seats)</option>
+        </select>
+        <br>
+
+        <label for="cabSize" id="cabSizeLabel">Select Cab Size:</label>
+        <select id="cabSize">
+            <option value="small">Small (2-4 seats)</option>
+            <option value="medium">Medium (4-6 seats)</option>
+            <option value="large">Large (6-8 seats)</option>
+        </select>
+    </div>
+
+    <div id="routeDetails">
+        <label for="routeDetailsInput" id="routeDetailsLabel">Route Details:</label>
+        <input type="text" id="routeDetailsInput" placeholder="Enter route details here">
+        <button id="scheduleRouteButton">Schedule Route</button>
+    </div>
+
+    <div id="reviewSection">
+        <h2 id="reviewHeader">Review Bus Route</h2>
+
+        <label for="rating" id="ratingLabel">Rating (1-5):</label>
+        <input type="number" id="rating" min="1" max="5">
+        <br>
+
+        <label for="reviewText" id="reviewTextLabel">Write your Review:</label>
+        <textarea id="reviewText" placeholder="Write your review here..."></textarea>
+        <br>
+
+        <button onclick="submitReview()">Submit Review</button>
+    </div>
+
+    <div id="reviewsContainer">
+        <!-- Reviews will be displayed here -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
